@@ -23,4 +23,4 @@ RUN go mod tidy
 RUN go build
 RUN mv config.json old-config.json
 
-CMD envsubst < old-config.json > config.json && ./socks-over-https &
+CMD envsubst < old-config.json > config.json && ./socks-over-https & /bin/sh
