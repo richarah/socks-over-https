@@ -1,6 +1,5 @@
 FROM alpine:latest
 
-
 # NOTE: port numbers are int, other values are str.
 # Therefore, escaping quotes is necessary for these to work
 # HTTPS tunnel config
@@ -24,4 +23,4 @@ RUN go mod tidy
 RUN go build
 RUN mv config.json old-config.json
 
-CMD envsubst < old-config.json > config.json && ./socks-over-https & /bin/sh
+CMD envsubst < old-config.json > config.json && ./socks-over-https
