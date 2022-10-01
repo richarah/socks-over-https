@@ -1,7 +1,7 @@
 {
     "log": {
         "dir": "/tmp/socks-over-https",
-        "level": "error"
+        "level": "debug"
     },
     "settings": {
         "readBufferSize": 4096,
