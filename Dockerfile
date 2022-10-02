@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+ADD . /proxy
+
 # NOTE: port numbers are int, other values are str.
 # Therefore, escaping quotes is necessary for these to work
 # HTTPS tunnel config
@@ -17,7 +19,6 @@ ENV PROXY_PASS=""
 RUN apk update
 RUN apk add gettext go
 
-ADD . /proxy
 WORKDIR /proxy
 RUN go mod tidy
 RUN go build
