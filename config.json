@@ -16,8 +16,8 @@
             "http": {
                 "address": $HTTPS_IP,
                 "port": $HTTPS_PORT,
-                "user": $USER,
-                "pass": $PASS
+                "user": $SOCKS_USER,
+                "pass": $SOCKS_PASS
             }
         }
     ]
