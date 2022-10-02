@@ -16,8 +16,8 @@
             "http": {
                 "address": $HTTPS_IP,
                 "port": $HTTPS_PORT,
-                "user": $SOCKS_USER,
-                "pass": $SOCKS_PASS
+                "user": $PROXY_USER,
+                "pass": $PROXY_PASS
             }
         }
     ]

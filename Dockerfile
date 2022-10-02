@@ -11,8 +11,8 @@ ENV SOCKS_IP=\"127.0.0.1\"
 ENV SOCKS_PORT="7777"
 
 # Auth
-ENV SOCKS_USER=""
-ENV SOCKS_PASS=""
+ENV PROXY_USER=""
+ENV PROXY_PASS=""
 
 RUN apk update
 RUN apk add gettext go
