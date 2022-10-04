@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.7
 
 ADD . /proxy
 
@@ -24,4 +24,4 @@ RUN go mod tidy
 RUN go build
 RUN mv config.json old-config.json
 
-CMD envsubst < old-config.json > config.json && ./socks-over-https && exit
+CMD envsubst < old-config.json > config.json && ./socks-over-https
