@@ -10,14 +10,14 @@
     "proxies": [
         {
             "socks": {
-                "address": $SOCKS_IP,
+                "address": "$SOCKS_IP",
                 "port": $SOCKS_PORT
             },
             "http": {
-                "address": $HTTPS_IP,
+                "address": "$HTTPS_IP",
                 "port": $HTTPS_PORT,
-                "user": $PROXY_USER,
-                "pass": $PROXY_PASS
+                "user": "$PROXY_USER",
+                "pass": "$PROXY_PASS"
             }
         }
     ]
