@@ -9,8 +9,8 @@ ENV HTTPS_IP=""
 ENV HTTPS_PORT=""
 
 # SOCKS5 config
-ENV SOCKS_IP="127.0.0.1"
-ENV SOCKS_PORT="7777"
+ENV SOCKS_IP=127.0.0.1
+ENV SOCKS_PORT=7777
 
 # Auth
 ENV PROXY_USER=""
@@ -24,4 +24,4 @@ RUN go mod tidy
 RUN go build
 RUN mv config.json old-config.json
 
-CMD envsubst < old-config.json > config.json && ./socks-over-https
+CMD envsubst < old-config.json > config.json && cat config.json && ./socks-over-https
