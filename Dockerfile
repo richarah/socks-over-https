@@ -13,11 +13,13 @@ ENV SOCKS_IP=127.0.0.1
 ENV SOCKS_PORT=7777
 
 # Auth
-ENV PROXY_USER=""
-ENV PROXY_PASS=""
+ENV HTTPS_USER=""
+ENV HTTPS_PASS=""
 
+# Routing branch: proxychains adds capability for app-based rather than port-based routing
+# (WIP)
 RUN apk update
-RUN apk add gettext go
+RUN apk add gettext go proxychains-ng
 
 WORKDIR /proxy
 RUN go mod tidy
